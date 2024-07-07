@@ -1,0 +1,41 @@
+
+<div class="row mt-2">
+
+    <div class="col-lg-4 offset-lg-4" >
+        <div class="card text-white bg-info mb-3" style="max-width: 25rem;">
+            <div class="card-header text-center">Agregar Curso</div>
+            <div class="card-body " >
+            <form [formGroup]="form" (ngSubmit)="agregado()">
+                <input formControlName="dia" type="text"class="form-control mt-2 " placeholder="Dia">
+
+                <input formControlName="curso"  type="text"class="form-control mt-2" placeholder="Curso ">
+  
+                <input formControlName="descripcion"  type="text"class="form-control mt-2" placeholder="Descripcion">
+  
+                <input formControlName="profesor"  type="text"class="form-control mt-2" placeholder="Profesor">
+  
+                <input formControlName="hora"  type="text"class="form-control mt-2" placeholder="Hora">
+  
+                <input formControlName="inscritos"  type="number"class="form-control mt-2" placeholder="Inscritos">
+                
+                <div class="row mt-3 text-center">
+                    <div class="col-lg-6  ">
+                        <button routerLink="/" type="button" class="btn btn-outline-dark">Volver</button>                       
+                    </div>
+
+                    <div class="col-lg-6 ">
+                        <button [disabled]="form.invalid" type="submit" class="btn btn-outline-danger">Aceptar</button>  
+                    </div>
+
+                    
+                </div>
+               
+
+               
+
+            </form>
+            </div>
+          </div>
+    </div>
+</div>
+
